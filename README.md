@@ -12,7 +12,7 @@ https://pan.baiyue.one
 ## 部署方法
 1. 下载本项目到服务器
 ```
-下载地址： https://pan.baiyue.one/d/root/开源代码/alist.zip
+下载地址： https://pan.baiyue.one/d/root/项目代码/alist.zip
 ```
 
 2. 解压后设置env.yml的配置文件

@@ -35,15 +35,19 @@ func RefreshToken(token string) bool {
 	}
 	// fmt.Println(res.String())
 	type Item struct {
-		AccessToken string `json:"access_token"`
+		AccessToken  string `json:"access_token"`
+		RefreshToken string `json:"refresh_token"`
 	}
 	itmes := new(Item)
 	// itmes := &Item{AccessToken: "jdiejdijeidje"}
+	// fmt.Println(res.String())
 	if err := res.JSON(&itmes); err != nil {
 		fmt.Println("参数解析失败")
+		fmt.Println(err)
 		return false
 	}
-	config.Conf.AliDrive.AccessToken = itmes.AccessToken // 新值为：=，非新值使用等号=
+	config.Conf.AliDrive.AccessToken = itmes.AccessToken   // 新值为：=，非新值使用等号=
+	config.Conf.AliDrive.RefreshToken = itmes.RefreshToken // 新值为：=，非新值使用等号=
 	config.Authorization = config.Bearer + itmes.AccessToken
 	if data, err := yaml.Marshal(config.Conf); err != nil {
 		fmt.Println("解析失败")

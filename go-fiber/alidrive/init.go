@@ -12,10 +12,10 @@ func InitAliDrive() bool {
 		fmt.Println("token无效，请重新设置")
 		return false
 	} else {
-		if config.Conf.AliDrive.AccessToken != "" {
-			RefreshToken(config.Conf.AliDrive.RefreshToken) // 更新token获取accessToken---ok
-			fmt.Println("token更新成功")
-		}
+		if !RefreshToken(config.Conf.AliDrive.RefreshToken) {
+			fmt.Println("token更新失败")
+		} // 更新token获取accessToken---ok
+		fmt.Println("token更新成功")
 		config.Authorization = config.Bearer + config.Conf.AliDrive.AccessToken
 	}
 	// 更新状态----

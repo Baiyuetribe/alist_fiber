@@ -5,7 +5,8 @@
 最近学习go语言的过程中，最大的感触是语法虽少但是上手比较困难，正好看到这个项目，采用前后端分离开发，前端vue+后端go语言用的gin框架。所以，为了让自己掌握go语言，我使用go语言最新的fiber框架重构了后端，前后端都移除了部分功能。
 
 ## 在线演示地址：
-https://pan.baiyue.one
+- https://pan.baiyue.one
+- 国内DEMO演示2： http://103.40.247.22:3000    [【该机器由茶猫云赞助,2天无理由退款+新购9折优惠】](https://www.chamaoyun.com/?u=D50390)     
 
 ![](img/demo.png)
 

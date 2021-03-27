@@ -1,4 +1,4 @@
-ps -ef|grep alist | grep -v grep | awk '{print $2}' | xargs kill -9 2>&1 &
+ps -ef|grep alist | grep -v grep | awk '{print $2}' | xargs kill -9
 chmod +x ./alist
 nohup ./alist > log.log 2>&1 &
 

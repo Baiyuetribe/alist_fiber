@@ -11,27 +11,14 @@
 ![](img/demo.png)
 
 ## 部署方法
-1. 下载本项目到服务器
-```
-下载地址： https://pan.baiyue.one/d/root/项目代码/alist.zip
-```
 
-2. 解压后设置env.yml的配置文件
-需要配置的已经中文标注了。其中logo可以使用网址，随便找个图床即可；
-网盘的根目录，比如在阿里云盘网页版创建任意文件夹，点击打开后，复制地址栏里的数字即可；
-![](img/rootid.png)
-token参数，在浏览器里，按下F12打开调试工具，然后
-![](img/token.png)
 
-3. 启动服务
-打开终端，运行下面的脚本即可
-```
-bash start.sh
-```
-如需刷新页面文件，同样输入以上命令完成重启操作,然后访问3000端口即可看到效果。
-
-**详细教程，请参考博客文章 https://baiyue.one/archives/1726.html**
+**请参考博客文章 https://baiyue.one/archives/1726.html**
 
 
 ## 参考项目
 - https://github.com/Xhofe/alist
+
+## 其他自研开源程序
+- 佰阅发卡 https://github.com/Baiyuetribe/kamiFaka
+- 短视频去水印解析glink https://github.com/Baiyuetribe/glink

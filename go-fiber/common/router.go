@@ -4,7 +4,7 @@ import "github.com/gofiber/fiber/v2"
 
 func Router(app *fiber.App) {
 	// 静态文件目录
-	app.Static("/", "dist") // 以主程序的路径为根目录
+	app.Static("/", "web") // 以主程序的路径为根目录
 	// api接口
 	api := app.Group("/api")
 	{

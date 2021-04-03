@@ -7,6 +7,7 @@ import (
 	"io/ioutil"
 
 	"github.com/levigross/grequests"
+
 	"gopkg.in/yaml.v2"
 )
 
@@ -24,10 +25,10 @@ func GetUserInfo() {
 // 获取jwt-token
 func RefreshToken(token string) bool {
 	// 刷新tokne
-	url := "https://websv.aliyundrive.com/token/refresh"
+	url := "https://auth.aliyundrive.com/v2/account/token"
 	// fmt.Println(token, url)
 	res, err := grequests.Post(url, &grequests.RequestOptions{
-		JSON: map[string]string{"refresh_token": token},
+		JSON: map[string]string{"refresh_token": token, "grant_type": "refresh_token"},
 	})
 	if err != nil {
 		fmt.Println("请求出错")
@@ -39,11 +40,9 @@ func RefreshToken(token string) bool {
 		RefreshToken string `json:"refresh_token"`
 	}
 	itmes := new(Item)
-	// itmes := &Item{AccessToken: "jdiejdijeidje"}
 	// fmt.Println(res.String())
 	if err := res.JSON(&itmes); err != nil {
-		fmt.Println("参数解析失败")
-		fmt.Println(err)
+		fmt.Println("The input parameter refresh_token is not valid")
 		return false
 	}
 	config.Conf.AliDrive.AccessToken = itmes.AccessToken   // 新值为：=，非新值使用等号=

@@ -14,3 +14,5 @@
 
 *.ipynb
 online.yml
+env copy.yml
+@TEMP

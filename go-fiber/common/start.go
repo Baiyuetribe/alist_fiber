@@ -27,10 +27,11 @@ func Start() bool {
 	if !alidrive.InitAliDrive() {
 		return false
 	}
+	// config.Authorization = config.Bearer + config.Conf.AliDrive.AccessToken
 	// 初始化数据库--首次就完成
 	config.InitDB()
 	if err := service.Clear(); err != nil {
-		fmt.Println("情况历史记录失败")
+		fmt.Println("清空历史记录失败")
 	}
 	// 构建目录树
 	if err := service.BuildTree(); err != nil {

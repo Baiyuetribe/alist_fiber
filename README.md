@@ -12,9 +12,19 @@
 
 ## 部署方法
 
-
 **请参考博客文章 https://baiyue.one/archives/1726.html**
 
+## 命令说明：
+二进制文件，可直接执行，相当于linux上的普通程序。
+```bash
+# 启动
+./alist
+# 为保持后台持续运行，使用nohup
+nohup ./alist > log.log 2>&1 &
+
+# 停止服务=终止进程
+ps -ef|grep alist | grep -v grep | awk '{print $2}' | xargs kill -9
+```
 
 ## 参考项目
 - https://github.com/Xhofe/alist
